@@ -3,7 +3,6 @@
   
 import java.io.*;
 import java.util.Scanner;
-import java.util.logging.LogManager;
 import java.util.Arrays;
 import java.lang.reflect.Array;
 
@@ -16,33 +15,50 @@ class codechefTest {
     public static void main(String[] args)
     {
 
-       int t;
-       Scanner sc = new Scanner(System.in);
-       t = sc.nextInt();
+       
 
-       while(t > 0)
-       {
+        	
+		Scanner sc = new Scanner(System.in);
+		
+		int t = sc.nextInt();
 
-        int len = sc.nextInt();
+        // System.out.println("NUMBER OF TEST CASES" + t);
+		
+		for(int i=0;i<t;i++)
+		{
+		    int l = sc.nextInt();
+		    String s = sc.next();
+            int count =0;
+            boolean answered = false;
+           
+            for(int j =0; j<l;j++)
+            {
+                char temp = s.charAt(j);
 
-        int arr[] = new int[len];
-        int counter[] = new int[1000];
+                if( temp == '1')
+                {
+                    count++;
+                }else{
 
-        Array.set(counter, 0, "for");
+                    System.out.println(count + "INSIDE LOOP");
+                    answered = true;
+ 
+                    break;
+                }
 
-        for(int i =0;i<len;i++)
 
-        {
-            arr[i] = sc.nextInt();
 
-            counter[arr[i]]= counter[arr[i]] + 1;
 
-        }
+            }
+            if(answered == false)
+            {
+                System.out.println(count + "OUTSIDE MAIN LPOp");
 
-        System.out.println(arr);
+            }
 
-           t--;
-       }
+
+		}
+	
 
     }
 }
