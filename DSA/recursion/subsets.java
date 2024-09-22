@@ -1,20 +1,15 @@
 package recursion;
 
-import java.io.*;
 import java.util.Scanner;
 
 public class subsets {
 
-
-    public static void printSubstring( String s)
-    {
+    public static void printSubstring(String s) {
         // System.out.println(s + " string element");
 
-
-        if(s.length() == 1)
-        {
+        if (s.length() == 1) {
             System.out.println(s);
-        }else{
+        } else {
             System.out.println(s + " string element");
 
             s = s.substring(1);
@@ -24,16 +19,14 @@ public class subsets {
 
     }
 
+    public static void main(String[] args) {
 
+        try (Scanner sc = new Scanner(System.in)) {
+            String str = sc.nextLine();
 
-    public static void main(String[] args){
+            printSubstring(str);
+        }
 
-    Scanner sc = new Scanner(System.in);
+    }
 
-    String str = sc.nextLine();
-
-    printSubstring(str);
-
-}
-    
 }

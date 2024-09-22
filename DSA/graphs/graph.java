@@ -29,7 +29,7 @@ public class graph {
         adj.get(j).add(i);
     }
 
-    public static void displayAdjacencyListGraph(List<List<Integer>> adj) {
+    public static void h(List<List<Integer>> adj) {
         for (int i = 0; i < adj.size(); i++) {
             for (int j = 0; j < adj.get(i).size(); j++) {
                 System.err.print(adj.get(i).get(j));
